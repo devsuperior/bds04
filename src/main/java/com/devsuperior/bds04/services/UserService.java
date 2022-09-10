@@ -13,9 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.bds04.controllers.UserInsertDTO;
 import com.devsuperior.bds04.dto.RoleDTO;
 import com.devsuperior.bds04.dto.UserDTO;
+import com.devsuperior.bds04.dto.UserInsertDTO;
 import com.devsuperior.bds04.entities.Role;
 import com.devsuperior.bds04.entities.User;
 import com.devsuperior.bds04.repositories.RoleRepository;

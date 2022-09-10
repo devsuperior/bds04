@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.devsuperior.bds04.dto.UserDTO;
+import com.devsuperior.bds04.dto.UserInsertDTO;
 import com.devsuperior.bds04.services.UserService;
 
 @RestController
