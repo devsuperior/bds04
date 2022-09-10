@@ -40,10 +40,10 @@ public class Role implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getAuthhority() {
+	public String getAuthority() {
 		return authority;
 	}
-	public void setAuthhority(String authhority) {
+	public void setAuthority(String authhority) {
 		this.authority = authhority;
 	}
 
