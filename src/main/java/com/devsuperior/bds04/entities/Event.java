@@ -1,6 +1,7 @@
 package com.devsuperior.bds04.entities;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,11 +26,12 @@ public class Event {
 	@JoinColumn(name = "city_id")
 	private City city;
 	
+	
 	public Event() {
 	}
 
-	public Event(Long id, String name, LocalDate date, String url, City city) {
-		this.id = id;
+	public Event(String name, LocalDate date, String url, City city) {
+		super();
 		this.name = name;
 		this.date = date;
 		this.url = url;

@@ -27,8 +27,8 @@ public class CityService {
 	@Transactional(readOnly = true)
 	public Page<CityDTO> findAllPaged(Pageable pageable) {
 		Page<City> list = repository.findAll(pageable);
-
 		return list.map(x -> new CityDTO(x));
+		
 	}
 
 	@Transactional(readOnly = true)

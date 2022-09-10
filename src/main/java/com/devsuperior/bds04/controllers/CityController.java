@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,14 +23,14 @@ import com.devsuperior.bds04.dto.CityDTO;
 import com.devsuperior.bds04.services.CityService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/cities")
 public class CityController {
 	
 	@Autowired
 	private CityService service;
 	
 	@GetMapping
-	public ResponseEntity<Page<CityDTO>> findAll(Pageable pageable) {
+	public ResponseEntity<Page<CityDTO>> findAll(@PageableDefault(sort= {"name"}) Pageable pageable) {
 		Page<CityDTO> list = service.findAllPaged(pageable);
 		return ResponseEntity.ok().body(list);
 	}
