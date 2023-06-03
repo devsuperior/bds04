@@ -52,7 +52,8 @@ public class EventControllerIT {
 	@Test
 	public void insertShouldReturn401WhenNoUserLogged() throws Exception {
 
-		EventDTO dto = new EventDTO(null, "Expo XP", LocalDate.of(2021, 5, 18), "https://expoxp.com.br", 1L);
+		LocalDate nextMonth = LocalDate.now().plusMonths(1L);
+		EventDTO dto = new EventDTO(null, "Expo XP", nextMonth, "https://expoxp.com.br", 1L);
 		String jsonBody = objectMapper.writeValueAsString(dto);
 		
 		ResultActions result =
