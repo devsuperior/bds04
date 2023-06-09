@@ -130,8 +130,8 @@ public class EventControllerIT {
 					.accept(MediaType.APPLICATION_JSON));
 		
 		result.andExpect(status().isUnprocessableEntity());
-		result.andExpect(jsonPath("$.errors[0].fieldName").value("name"));
-		result.andExpect(jsonPath("$.errors[0].message").value("Campo requerido"));
+		result.andExpect(jsonPath("$.errors.[0].fieldName").value("name"));
+		result.andExpect(jsonPath("$.errors.[0].message").value("Campo requerido"));
 	}
 
 	@Test
@@ -151,8 +151,8 @@ public class EventControllerIT {
 					.accept(MediaType.APPLICATION_JSON));
 		
 		result.andExpect(status().isUnprocessableEntity());
-		result.andExpect(jsonPath("$.errors[0].fieldName").value("date"));
-		result.andExpect(jsonPath("$.errors[0].message").value("A data do evento não pode ser passada"));
+		result.andExpect(jsonPath("$.errors.[0].fieldName").value("date"));
+		result.andExpect(jsonPath("$.errors.[0].message").value("A data do evento não pode ser passada"));
 	}
 
 	@Test
@@ -172,8 +172,8 @@ public class EventControllerIT {
 					.accept(MediaType.APPLICATION_JSON));
 		
 		result.andExpect(status().isUnprocessableEntity());
-		result.andExpect(jsonPath("$.errors[0].fieldName").value("cityId"));
-		result.andExpect(jsonPath("$.errors[0].message").value("Campo requerido"));
+		result.andExpect(jsonPath("$.errors.[0].fieldName").value("cityId"));
+		result.andExpect(jsonPath("$.errors.[0].message").value("Campo requerido"));
 	}
 
 	@Test
